@@ -12,7 +12,7 @@ export function calculateWinner(buttons) {
     for (let i = 0; i < lines.length; i++) {
       const [a, b, c] = lines[i];
       if (buttons[a] && buttons[a] === buttons[b] && buttons[a] === buttons[c]) {
-        return buttons[a];
+        return buttons[a] !== ' '? buttons[a] : null;
       }
     }
     return null;

@@ -4,7 +4,7 @@ function Buttons(props) {
   return (
     <input
       type="button"
-      disabled={props.ifWin !== null && props.ifWin !== " " ? true : ( props.value === " " ? false : true )}
+      disabled={props.ifWin !== null ? true : ( props.value === " " ? false : true )}
       className="tttButton"
       value={props.value}
       name={props.idx}

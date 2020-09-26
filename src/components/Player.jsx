@@ -3,7 +3,7 @@ import React from "react";
 function Player(props) {
   if (props.winnerPlayer === "X" || props.winnerPlayer === "O") {
     return (
-      <div className="playerBox" style={{ color: "green" }}>
+      <div className="playerBox" style={{ color: "green" , fontSize:"2em" }}>
         <h4>
           {props.winnerPlayer} <span> wins!!!! 👏👏👏</span>
         </h4>
