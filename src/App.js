@@ -16,11 +16,10 @@ class App extends Component {
       result: null,
       playerSelect: true,
       buttons: [...Array(9)].fill(' '),
-      // result:null
     }
     this.buttonClick = this.buttonClick.bind(this)
     this.resetGame = this.resetGame.bind(this)
-    // this.resetResult = this.resetResult.bind(this)
+    this.resetResult = this.resetResult.bind(this)
   }
 
   buttonClick(e) {
@@ -50,17 +49,18 @@ class App extends Component {
     })
   }
 
-  // resetResult(){
-  //   this.setState({
-  //     result: null
-  //   })
-  // }
+  resetResult(){
+    console.log("reset")
+    this.setState({
+      result: null
+    })
+  }
 
   render() {
     return (
       <div>
         <Title />
-        {/* <ScoreBoard score={this.state.result} reset={this.resetResult}/> */}
+        <ScoreBoard score={this.state.result} reset={this.resetResult}/>
         <Box buttons={this.state.buttons}
           buttonClick={this.buttonClick}
           wins={this.state.winner}

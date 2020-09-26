@@ -4,7 +4,7 @@
 .tttBox{
     width: 318px;
     background-color: rgba(10, 8, 8, 0.466);
-    margin: 8em;
+    margin: 10em 0 0;
 }
 
 .tttButton{
@@ -23,10 +23,13 @@
 }
 
 .playerBox{
-    width: 40%;
+    position: absolute;
+    right: 18%;
+    width: 150px;
+    top: 40%;
     margin: auto;
     text-align: center;
-    padding: -3rem 4rem;
+    padding: -2rem 4rem;
     font-size: 20px;
 }
 
@@ -36,17 +39,16 @@
     background-color: rgb(197, 198, 199);
     padding: 1rem 2rem;
     top: 70%;
-    left: 46%;
+    left: 10%;
     border: 30px;
     margin: auto;
     text-align: center;
 }
 .titleDiv,.scoreBoard{
     position: absolute;
-    top: 1%;
-    left: 42%;
+    top: -5px;
+    left: 40%;
     width: 260px;
-    height: 80%;
     font-size: 24px;
     text-decoration: underline;
     z-index: -1;
@@ -73,3 +75,4 @@ table {
   tr:nth-child(even) {
     background-color: #dddddd;
   }
+

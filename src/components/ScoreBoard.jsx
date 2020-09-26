@@ -1,20 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function ScoreBoard(props) {
-//   const [result, setresult] = useState(0);
-//     let value = props.score;
+  const [result, setresult] = useState({
+    X: 0,
+    O: 0,
+    D: 0,
+  });
+  let value = props.score;
 
-//   if (value) {
-//     if (value === "D") {
-//       setresult(result + 1);
-//     }
-//     props.reset()
-//   }
+  useEffect(() => {
+    if (value !== null) {
+      setresult((prev) => {
+        return {
+          ...prev,
+          [value]: result[value] + 1,
+        };
+      });
+      props.reset();
+    }
+  });
 
   return (
     <div className="scoreBoard">
-      <h2>HTML Table</h2>
-      {props.score}
+      <h2>Score Board</h2>
       <table>
         <thead>
           <tr>
@@ -26,12 +34,12 @@ function ScoreBoard(props) {
         <tbody>
           <tr>
             <td>player1</td>
-            {/* <td>{result.p1w}</td> */}
-            {/* <td>{result}</td> */}
+            <td>{result.X}</td>
+            <td>{result.D}</td>
           </tr>
           <tr>
             <td>player2</td>
-            {/* <td>{result.p2w}</td> */}
+            <td>{result.O}</td>
           </tr>
         </tbody>
       </table>
