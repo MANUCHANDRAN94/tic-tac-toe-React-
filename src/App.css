@@ -36,13 +36,14 @@
 .resetBtn{
     position: absolute;
     width: 100px;
-    background-color: rgb(197, 198, 199);
+    background-color: rgb(191, 195, 199);
+    border: 2px solid whitesmoke;
     padding: 1rem 2rem;
-    top: 70%;
+    top: 65%;
     left: 10%;
-    border: 30px;
     margin: auto;
     text-align: center;
+    font-size: 16px;
 }
 .titleDiv,.scoreBoard{
     position: absolute;
