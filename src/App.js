@@ -34,7 +34,7 @@ class App extends Component {
       playerSelect: !this.state.playerSelect,
       winner: winner,
       draws: draw
-      
+
     })
 
   }
@@ -46,7 +46,7 @@ class App extends Component {
       draws: null,
       playerSelect: true,
       buttons: [...Array(9)].fill(' '),
-      result:value
+      result: value
     })
   }
 
